@@ -24,6 +24,8 @@ public class E02StringMethod4 {
 		String jumin = sca1.nextLine();
 		if(jumin.charAt(7)=='3' || jumin.charAt(7)=='1') System.out.println("남자입니다.\n");
 		else if (jumin.charAt(7)=='4' || jumin.charAt(7)=='2') System.out.println("여자입니다.\n");
+		else if (jumin.charAt(7)=='5' || jumin.charAt(7)=='6') System.out.println("외국인입니다.\n");
+		else System.out.println("주민등록번호를 잘못 입력하셨습니다.");
 		
 		System.out.println("이메일주소를 입력하세요 : ");
 		String email = sca1.nextLine();
@@ -34,6 +36,8 @@ public class E02StringMethod4 {
 		String jumin2 = sca1.nextLine();
 		if(jumin2.indexOf("3")==7 || jumin2.indexOf("1")==7) System.out.println("남자입니다.2\n");
 		else if (jumin2.indexOf("4")==7 || jumin2.indexOf("2")==7) System.out.println("여자입니다.2\n");
+		else if (jumin2.indexOf("5")==7 || jumin2.indexOf("6")==7) System.out.println("외국인입니다.2\n");
+		else System.out.println("주민등록번호를 잘못 입력하셨습니다.");
 		
 		System.out.println("파일명을 입력하세요 : ");
 		String fileN = sca1.nextLine();
