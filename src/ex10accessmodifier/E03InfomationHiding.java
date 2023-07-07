@@ -63,7 +63,7 @@ public class E03InfomationHiding {
 //		buyer.bMoney -= 1000; //구매자의 금액 차감
 //		seller1.appleNum -= 50; //사과50개 구매한다.
 //		buyer.appleNum += 50; //구매자는 사과50개가 증가한다.
-		//각판매자에게 1000원지급
+		//각판매자에게 1000원지급, information hiding을 통해 판매규칙이 지켜진다.
 		buyer.buyApple(seller1, 1000);
 		buyer.buyApple(seller2, 1000);
 		
