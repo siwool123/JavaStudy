@@ -7,13 +7,13 @@ package ex08class;
 
  */
 class CalculatorEx {
-	int pNum, minusNum, mulNum, devNum;
+	int pNum, minusNum, mulNum, divNum;
 	
 	void init() {
 		pNum=0; 
 		minusNum=0;
 		mulNum=0;
-		devNum=0;
+		divNum=0;
 	}
 	double add(double a, double b) {
 		pNum++;
@@ -28,14 +28,14 @@ class CalculatorEx {
 		return a*b;
 	}
 	double div(double a, double b) {
-		devNum++;
+		divNum++;
 		return a/b;
 	}
 	void showOpCount() {
 		System.out.println("덧셈횟수 : "+pNum);
 		System.out.println("뺄셈횟수 : "+minusNum);
 		System.out.println("곱셈횟수 : "+mulNum);
-		System.out.println("나눗셈횟수 : "+devNum);
+		System.out.println("나눗셈횟수 : "+divNum);
 	}
 }
 public class QuSimpleCalculator {
