@@ -11,10 +11,10 @@ public class E03CallByValue {
 	public static void main(String[] args) {
 		
 		int first = 100, second = 200;
-		System.out.println("main 메소드 안_호출전 : first = "+first+", second = "+second);
+		System.out.println("main 메소드 안_호출전 : \nfirst = "+first+", second = "+second);
 		callByValue(first,second);
 		
-		System.out.println("main 메소드 안_호출후 : first = "+first+", second = "+second);
+		System.out.println("main 메소드 안_호출후 : \nfirst = "+first+", second = "+second);
 	}
 /*
  * 매개변수로 전달된 값은 복사되어 해당 지역의 메서드에서 사용할수있게된다.
@@ -26,7 +26,7 @@ public class E03CallByValue {
 		fNum = sNum;
 		sNum = temp;
 		
-		System.out.println("callByValue 메소드안 : first = "+fNum+", second = "+sNum);
+		System.out.println("callByValue 메소드안 : \nfirst = "+fNum+", second = "+sNum);
 /*
  * 해당메서드 종료하면 호출한 지점으로 되돌아간다. */
 	}

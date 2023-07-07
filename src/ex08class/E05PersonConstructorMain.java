@@ -15,11 +15,11 @@ public class E05PersonConstructorMain {
 		System.out.println("\n[이름만 전달한 값으로 초기화하기]");
 		PersonConstructor person2 = new PersonConstructor("박길동");
 		person2.personInfo();
-		
+
 		System.out.println("\n[이름과 나이만 전달한 값으로 초기화하기]");
 		PersonConstructor person3 = new PersonConstructor("최길동", 40);
 		person3.personInfo();
-		
+	
 		System.out.println("\n[모든 매개변수를 전달한 값으로 초기화하기]");
 		PersonConstructor person4 = new PersonConstructor("박길동", 50, "가산동");
 		person4.personInfo();
