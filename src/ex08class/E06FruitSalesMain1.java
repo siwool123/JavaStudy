@@ -1,5 +1,8 @@
 package ex08class;
-
+//판매자를 추상화한 클래스
+/*
+ * 멤버상수는 선언시 초기화를 동시해 해줘야함
+ */
 class FruitSeller {
 	int appleNum = 100;
 	int sMoney = 0;
@@ -38,8 +41,10 @@ public class E06FruitSalesMain1 {
 		System.out.println("구매행위가 일어나기 전의 상태");
 		seller.saleResult();
 		buyer.buyResult();
+		
 		buyer.buyApple(seller, 5000);
-		System.out.println("구매행위가 일어난 후의 상태");
+		
+		System.out.println("\n구매행위가 일어난 후의 상태");
 		seller.saleResult();
 		buyer.buyResult();
 	}

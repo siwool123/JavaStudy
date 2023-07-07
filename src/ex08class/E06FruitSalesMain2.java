@@ -1,5 +1,7 @@
 package ex08class;
-
+/*
+ * 상수로 선언했던 apple price를 일반 변수로 선언만 하여 init 의 매개변수로 초기값 설정받도록함
+ */
 class FruitSeller2 {
 	int appleNum, sMoney, apple_price;
 	
@@ -22,8 +24,13 @@ class FruitSeller2 {
 }
 
 class FruitBuyer2 {
-	int bMoney = 5000, appleNum = 0;
-	public void buyApple(FruitSeller seller, int money) {
+	int bMoney, appleNum;
+	
+	public void init(int money, int appleNum) {
+		this.appleNum = appleNum;
+		bMoney = money;
+	}
+	public void buyApple(FruitSeller2 seller, int money) {
 		appleNum += seller.saleApple(money);
 		bMoney -= money;
 	}
@@ -36,7 +43,27 @@ class FruitBuyer2 {
 public class E06FruitSalesMain2 {
 
 	public static void main(String[] args) {
+		FruitSeller2 seller2 = new FruitSeller2();
+		seller2.init(0, 100, 1000);
 		
+		FruitSeller2 seller3 = new FruitSeller2();
+		seller3.init(0, 80, 500);
+		
+		FruitBuyer2 buyer2 = new FruitBuyer2();
+		buyer2.init(10000, 0);
+		
+		System.out.println("구매행위가 일어나기전의 상태");
+		seller2.saleResult();
+		seller3.saleResult();
+		buyer2.buyResult();
+		
+		buyer2.buyApple(seller2, 5000);
+		buyer2.buyApple(seller3, 5000);
+		
+		System.out.println("\n구매행위가 일어난 후의 상태");
+		seller2.saleResult();
+		seller3.saleResult();
+		buyer2.buyResult();
 	}
 
 }
