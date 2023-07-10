@@ -4,9 +4,12 @@ public class Calculator {
 	//멤버변수
 	private Adder adder;
 	private Subtractor subtractor;
-
+/*
+ * 해당 클래스는 파일명과 동일하고, 외부에서 접근해야하는 용도이므로 public으로 선언. 
+ * 해당 파일의 대표클래스
+ */
 	//생성자메소드: 해당 클래스의 객체가 생성될때 덧셈, 뺄셈을 위한 객체도 동시에 생성된다. 
-		public void Calculator() {		
+		public Calculator() {		
 			adder = new Adder();
 			subtractor = new Subtractor();
 		}	
