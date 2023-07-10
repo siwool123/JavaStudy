@@ -33,9 +33,11 @@ public class QuValidateId {
 	static boolean idValidate (String val) {
 		for(int i=0; i<val.length(); i++) {
 			char j = val.charAt(i);
-			if((j>='a' && j<='z') || (j>='0' && j<='9')) return true;
+			if(!((j>='a' && j<='z') || (j>='A' && j<='Z') || (j>='0' && j<='9'))) {
+				return false;
+			}
 		}
-		return false;
+		return true;
 	}
-
 }
+

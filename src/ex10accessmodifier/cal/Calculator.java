@@ -1,12 +1,12 @@
 package ex10accessmodifier.cal;
 
-public class Calcualator {
+public class Calculator {
 	//멤버변수
 	private Adder adder;
 	private Subtractor subtractor;
 
 	//생성자메소드: 해당 클래스의 객체가 생성될때 덧셈, 뺄셈을 위한 객체도 동시에 생성된다. 
-		public Calculator() {		
+		public void Calculator() {		
 			adder = new Adder();
 			subtractor = new Subtractor();
 		}	

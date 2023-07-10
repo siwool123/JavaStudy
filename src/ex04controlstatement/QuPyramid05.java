@@ -32,6 +32,18 @@ public class QuPyramid05 {
 			}
 			System.out.println();
 		}
+		
+		System.out.println("별 갯수2 : ");
+		int num2 = sca2.nextInt();
+		for(int i=1; i<=num2; i++) {
+			for(int j=1; j<=num2-i; j++) {
+				System.out.print("   ");
+			}
+			for(int j=num2-i+1; j<=num2; j++) {
+				System.out.print(" * ");
+			}
+			System.out.println();
+		}
 	}
 
 }
