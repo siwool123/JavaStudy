@@ -4,32 +4,32 @@ package ex12inheritance;
  * 그리고 이의 확인을 위한 main 메소드도 적절히 정의해보자.
  */
 class Car {
-       	int gasoline;
-       	public Car (int a) {
-       		gasoline = a;
-       		System.out.println("가솔린 차량 연료값 초기화");
-       	}
+   	int gasoline;
+    public Car (int a) {
+    	gasoline = a;
+   		System.out.println("가솔린 차량 연료값 초기화");
+   	}
 }
 class HybridCar extends Car {
-       	int electric;
-       	public HybridCar(int a, int b) {
-       		super(a);
-       		electric = b;
-       		System.out.println("하이브리드 차량 연료값 초기화");
-       	}
+   	int electric;
+   	public HybridCar(int a, int b) {
+   		super(a);
+   		electric = b;
+   		System.out.println("하이브리드 차량 연료값 초기화");
+   	}
 }
 class HybridWaterCar extends HybridCar {
-       	int water;
-       	public HybridWaterCar (int a, int b, int c) {
-       		super(a, b);
-       		water = c;
-       		System.out.println("하이브리드 수소차량 연료값 초기화");
-       	}
-       	public void showNowGauge(){
-                 	System.out.println("남은가솔린:"+gasoline);
-                 	System.out.println("남은전기량:"+electric);
-                 	System.out.println("남은워터량:"+water);
-       	}
+   	int water;
+   	public HybridWaterCar (int a, int b, int c) {
+   		super(a, b);
+   		water = c;
+   		System.out.println("하이브리드수소차량 연료값 초기화");
+   	}
+   	public void showNowGauge(){
+       	System.out.println("남은가솔린:"+gasoline);
+       	System.out.println("남은전기량:"+electric);
+       	System.out.println("남은워터량:"+water);
+   	}
 }
 
 public class QuConstructorAndSuper {

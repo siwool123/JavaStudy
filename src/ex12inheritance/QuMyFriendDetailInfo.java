@@ -37,7 +37,6 @@ class MyFriendDetailInfo extends MyFriendInfo {
 public class QuMyFriendDetailInfo {
 
 	public static void main(String[] args) {
-		//이름, 나이, 주소, 전화번호를 인자로 객체를 생성…정보Print
 		MyFriendDetailInfo fdi = new MyFriendDetailInfo("이순신", 100, "성균관", "010-1000-8888");
 		fdi.showMyFriendDetailInfo();
 	}

@@ -1,10 +1,10 @@
 package ex12inheritance;
 
-class A {
-	public void A() {} //부모클래스의 디폴트생성자 (생략)
+class AA {
+	public void AA() {} //부모클래스의 디폴트생성자 (생략)
 }
-class B extends A {
-	public B() { //자식클래스의 디폴트생성자 (생략)
+class BB extends AA {
+	public BB() { //자식클래스의 디폴트생성자 (생략)
 		super(); //부모클래스를 호출하는 문장 (생략)
 	}
 }
@@ -12,7 +12,7 @@ class B extends A {
 public class Test {
 
 	public static void main(String[] args) {
-		B b = new B(); //자식클래스로 인스턴스생성
+		BB b = new BB(); //자식클래스로 인스턴스생성
 	}
 }
 		/*
