@@ -14,10 +14,9 @@ class Rectangle {
 		System.out.println("직사각형 면적 : "+a*b);
 	}
 }
-class Square extends Rectangle {
+class Square {
 	private int c;
 	public Square (int d) {
-		super(d, d);
 		c = d;
 	}
 	public void showAreaInfo() {
