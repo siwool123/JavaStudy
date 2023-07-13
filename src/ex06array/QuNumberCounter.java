@@ -17,11 +17,7 @@ public class QuNumberCounter {
 		
 		int[] answer = { 1,4,4,3,1,4,4,2,1,3,2 };
 		int[] counter = {0,0,0,0};
-		
-		for(int i : counter) {
-			i = 0;
-		}
-		
+				
 		for(int i : answer) {
 			if(i==1) counter[0]++;
 			else if(i==2) counter[1]++;

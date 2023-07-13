@@ -21,7 +21,6 @@ public class DeChild extends DeParent {
  * 메소드오버라이딩 조건 : 
  * - 부모클래스에서 선언될때(default)와 비교해 접근범위가 동일하거나 그보다넓으면(public) 가능
  */
-	@Override
 	public String sleep() {
 		System.out.println("학생이 잔다.");
 		return null;
@@ -32,7 +31,6 @@ public class DeChild extends DeParent {
 		return 0;
 	}
 //오버라이딩 정의. 메소드형태가 완전동일
-	@Override
 	public void exercise() {
 		System.out.println("학생이 운동한다.");
 	}

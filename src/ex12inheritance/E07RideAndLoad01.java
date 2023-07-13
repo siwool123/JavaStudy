@@ -16,7 +16,6 @@ class A {
 	}
 }
 class B extends A {
-	@Override
 	public void rideM() {
 		System.out.println("B의 rideM");
 	}
@@ -33,7 +32,6 @@ class C extends B {
  * 따라서 C클래스로 인스턴스 생성시 오버라이딩된 매소드는 모두 가려지므ㅗㄹ C클래스에 정의된메소드
  * 하나만 남는다. 오버로딩된 메소드는 서로 다르므로 3개 모두 존재한다.
  */
-	@Override
 	public void rideM() {
 		System.out.println("C의 rideM");
 	}
