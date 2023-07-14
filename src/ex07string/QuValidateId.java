@@ -24,6 +24,10 @@ public class QuValidateId {
 		Scanner sca2 = new Scanner(System.in);
 		System.out.print("아이디를 입력하세요 : \n");
 		String value = sca2.nextLine();
+// toCharArray() : 문자열을 배열처럼 변형해주는 스트링함수		
+		char[] value2 = value.toCharArray();
+		for(char i:value2) {System.out.println(i+", ");}
+		
 		if(value.length()>7 && value.length()<13 && idValidate(value)==true) {
 			System.out.println("사용할 수 있는 아이디입니다.");
 		}

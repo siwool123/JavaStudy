@@ -1,4 +1,7 @@
 package ex06array;
+
+import java.util.stream.IntStream;
+
 /*
  * 문제2) 다음 절차에 따라 프로그램을 작성하시오.
 1. 크기가 10인 정수타입의 배열을 선언한다.
@@ -15,12 +18,11 @@ package ex06array;
 public class QuArray1To10 {
 
 	public static void main(String[] args) {
-		int[] arr = new int[10];
+		int[] arr = IntStream.range(1, 11).toArray();
 		int sum = 0;
-		for(int i=0; i<arr.length; i++) {
-			arr[i] = i+1;
-			sum += arr[i];
-			System.out.print(arr[i]+" ");
+		for(int i:arr) {
+			sum += i;
+			System.out.print(i+" ");
 		}
 		System.out.println("\n배열전체요소의 합 : "+sum);
 	}

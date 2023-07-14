@@ -33,26 +33,16 @@ public class QuFillArray {
 			arr[i] = sca2.nextInt();
 		}
 		System.out.println("\n순서대로 입력된 결과");
-		for(int i:arr) {
-			System.out.print(i+" ");
-		}
+		for(int i:arr) {System.out.print(i+" ");}
 		
 		int[] arr2 = new int[10];
-		int j=0, k=0;
+		int j=0, k=arr2.length-1;
 		for(int i=0; i<arr2.length; i++) {
-			if(arr[i]%2==1) {
-				arr2[j] = arr[i];
-				j++;
-			}
-			else {
-				arr2[arr2.length-1-k] = arr[i];
-				k++;
-			}
+			if(arr[i]%2==1) arr2[j++] = arr[i]; //홀수인경우 앞부터채운다
+			else arr2[k--] = arr[i]; //짝수인경우 뒤부터채운다
 		}
 		System.out.println("\n홀수/짝수 구분 입력 결과");
-		for(int i:arr2) {
-			System.out.print(i+" ");
-		}
+		for(int i:arr2) {System.out.print(i+" ");}
 	}
 
 }
