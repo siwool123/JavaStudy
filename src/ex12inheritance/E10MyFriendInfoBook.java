@@ -68,7 +68,7 @@ public class E10MyFriendInfoBook {
 		FriendInfoHandler handler = new FriendInfoHandler(100);
 /*
  * 무한루프 조건으로 사용자가 원할떄 종료할수있는 구조를 만들어준다.
- * break문은 반복문 탈출시키는 기능이 있으므로 이처럼 무한루프에서 자주사용한다
+ * break문은 반복문 탈출시키는 기능이 있어 무한루프에서 자주사용한다
  * main 메소드에서는 특별한 기능은 구현하지 않고 프로그램 전반 흐름에대해서만 담당한다		
  */
 		while(true) {

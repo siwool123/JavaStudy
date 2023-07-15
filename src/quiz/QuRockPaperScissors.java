@@ -39,35 +39,48 @@ import java.util.Scanner;
 public class QuRockPaperScissors {
 
 	public static void main(String[] args) {
-				
-		for(int i=0; i<5; i++) {
+		do {
+			rps();
+		}while(askRestart());
+		System.out.println("게임을 종료합니다. 감사합니다. ");
+	}
+	
+	public static void rps() {
+		int i=0;		
+		while(i<5) {
 			int ran = (int)((Math.random()*3)+1);
 			System.out.println("무엇을 내겠습니까?(1: 가위, 2:바위, 3:보) : ");
 			Scanner sc = new Scanner(System.in);
 			int user = sc.nextInt();
 			if(user>0&&user<4) {
-				if(ran==user) System.out.println("사용자 : "+userR(user)+", 컴퓨터 : "+userR(ran)+"\n비겼습니다.");
-				else if(user==1&&ran==3 || user==2&&ran==1 || user==3&&ran==2) System.out.println("사용자 : "+userR(user)+", 컴퓨터 : "+userR(ran)+"\n이겼습니다.");
-				else if(user==1&&ran==2 || user==2&&ran==3 || user==3&&ran==1) System.out.println("사용자 : "+userR(user)+", 컴퓨터 : "+userR(ran)+"\n졌습니다.");
+				switch(user-ran) {
+				case 0:
+					System.out.println("사용자 : "+result(user)+", 컴퓨터 : "+result(ran)+"\n비겼습니다.");i++;	break;
+				case 1: case -2:
+					System.out.println("사용자 : "+result(user)+", 컴퓨터 : "+result(ran)+"\n이겼습니다.");i++;	break;
+				case 2: case -1:
+					System.out.println("사용자 : "+result(user)+", 컴퓨터 : "+result(ran)+"\n졌습니다.");i++;
+				}
 			}
 			else System.out.println("가위바위보 할줄 모르세요? 제대로 내세요^^;"); continue;
 		}
-		System.out.println("5번의 게임이 끝났습니다. 게임을 계속하시겠습니까? 재시작(1), 종료(0) : ");
-		Scanner sc = new Scanner(System.in);
-		int user2 = sc.nextInt();
-		if(user2==1)
-		if(user2==0) {
-			System.out.println("게임이 종료되었습니다. 감사합니다."); return;
-		}
-		else System.out.println("잘못입력하셨습니다. 재시작(1), 종료(0) 중에 입력하세요…");
-						
 	}
 	
-	public static String userR (int num) {
+	public static String result (int num) {
 		if(num==1) return "가위";
 		else if(num==2) return "바위";
-		else if(num==3) return "보";
+		else if(num==3) return "보";	
 		else return "에러";
 	}
-
+	public static boolean askRestart() {
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			System.out.println("5번의 게임이 끝났습니다. \n게임을 계속하시겠습니까? (1:재시작, 0:종료) : ");
+			int choice = sc.nextInt();
+			sc.nextLine(); // 버퍼에 남아있는 Enter키를 제거
+			if(choice==1) return true;
+			else if(choice==0) return false;
+			else System.out.println("잘못된 입력입니다. 다시 입력해주세요. ");
+		}
+	}
 }
