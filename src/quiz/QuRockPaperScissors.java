@@ -54,12 +54,9 @@ public class QuRockPaperScissors {
 			int user = sc.nextInt();
 			if(user>0&&user<4) {
 				switch(user-ran) {
-				case 0:
-					System.out.println("사용자 : "+result(user)+", 컴퓨터 : "+result(ran)+"\n비겼습니다.");i++;	break;
-				case 1: case -2:
-					System.out.println("사용자 : "+result(user)+", 컴퓨터 : "+result(ran)+"\n이겼습니다.");i++;	break;
-				case 2: case -1:
-					System.out.println("사용자 : "+result(user)+", 컴퓨터 : "+result(ran)+"\n졌습니다.");i++;
+				case 0:	System.out.println("사용자 : "+result(user)+", 컴퓨터 : "+result(ran)+"\n비겼습니다.");i++;	break;
+				case 1: case -2: System.out.println("사용자 : "+result(user)+", 컴퓨터 : "+result(ran)+"\n이겼습니다.");i++;	break;
+				case 2: case -1: System.out.println("사용자 : "+result(user)+", 컴퓨터 : "+result(ran)+"\n졌습니다.");i++;
 				}
 			}
 			else System.out.println("가위바위보 할줄 모르세요? 제대로 내세요^^;"); continue;
