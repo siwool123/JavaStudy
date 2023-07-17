@@ -1,6 +1,6 @@
 package ex15usefulclass;
 /*
- * wrapper : 기보낮료형의 데이터를 인스턴스화할때 사용하는 클래스로 boxing 혹은 
+ * wrapper : 기본자료형의 데이터를 인스턴스화할때 사용하는 클래스로 boxing 혹은 
  * unboxing 통해 기본자료형의 데이터를 인스턴스화한다. 
  * 뒤에 학습할 제네릭클래스에서 필수적으로 사용된다. 
  */
