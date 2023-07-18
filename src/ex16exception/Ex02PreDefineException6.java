@@ -17,7 +17,7 @@ public class Ex02PreDefineException6 {
 		System.out.println("끝~~~");
 		
 		String str = "형변환되나요?";
-		if(myClassCasting(str)==true)	System.out.println("됩니다요..");
+		if(myClassCasting(str))	System.out.println("됩니다요..");
 		else	System.out.println("안되네요..ㅜㅜ;");
 
 	}
