@@ -8,7 +8,7 @@ import java.util.Vector;
  * ArrayList<E> : List 계열의 컬렉션
  * - 데이터의 중복저장이 허용된다
  * - 데이터의 저장순서 보장
- * - 데이터 접근시 get() 혹ㅇ느 iterator()를 이용
+ * - 데이터 접근시 get() 혹은 iterator()를 이용
  * - Array라는 이름처럼 배열의 특성을 갖고있어 index 통한 저장 및 접근가능
  * 
  * String인스턴스 저장가능한 List컬렉션 생성 ArrayList와 나머지 컬렉션들은 데이터를 저장하는 
