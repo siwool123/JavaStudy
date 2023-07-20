@@ -29,22 +29,19 @@ public class QuArrayList {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("삭제할 이름을 입력하세요 : ");
 		String srch = sc.nextLine();
-		boolean isDel=false;
+		int idx = -1;
 		for(Student i:list) {
 			if(i.getName().equals(srch)) {
+				idx = list.indexOf(i);
+				System.out.println(">> 검색한 데이터가 "+idx+" 번 \n>> 인덱스에 있습니다. 삭제합니다 ");
 				System.out.println(i.toString());
-				System.out.println("=== 데이터가 검색되었습니다 ===");
 				list.remove(i);
-				isDel = true; 
 				break;
 			}
 		}
-		if(isDel==false)  System.out.println("=== 검색결과가 없습니다 ===");
+		if(idx==-1)  System.out.println("=== 검색결과가 없습니다 ===");
 		System.out.println("===== 삭제후 전체정보 출력 =====");
-		for(Student i:list) {
-			System.out.println(i.toString());
-		}
-
+		for(Student i:list) {System.out.println(i.toString());	}
 	}
 
 }

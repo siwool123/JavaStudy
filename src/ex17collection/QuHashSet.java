@@ -20,15 +20,20 @@ class Avengers {
 	}
 	@Override
 	public String toString() {
-		return "Avengers [본명 = "+name+", 닉네임 = "+heroName+", 능력 = "+weapon+"]";
+		return "Avengers \n[본명 = "+name+", \n닉네임 = "+heroName+", \n능력 = "+weapon+"]";
 	}
 	@Override
-	public int hashCode() {	int rCode = this.name.hashCode(); return rCode;}
+	public int hashCode() {	
+		int rCode = this.name.hashCode()+this.heroName.hashCode()+this.weapon.hashCode(); 
+		return rCode;
+	}
 	@Override
 	public boolean equals(Object obj) {
 		Avengers av = (Avengers) obj;
-		if (av.name == this.name) return true;
-		else	return false;
+		if (av.name.equals(this.name) && av.heroName.equals(this.heroName) && av.weapon.equals(this.weapon)) {
+			return true;
+		} //3개의 멤버변수를 비교하여 동일객체발견시 true반환한다. 그러면 set엔 저장되지않음
+		else	return false; //다른객체라면 false반환하여 set에 저장됨
 	}
 }
 
@@ -56,8 +61,8 @@ public class QuHashSet {
 		String srchName = sc.nextLine();
 		for(Avengers i:set) {
 			if(srchName.equals(i.name)) {
-				System.out.println(i.toString());
 				System.out.println("=== 요청 정보를 찾았습니다 ===");
+				System.out.println(i.toString());
 				isFind = true;
 			}
 		}
