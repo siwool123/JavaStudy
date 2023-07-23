@@ -9,10 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/*
-버퍼 필터 스트림을 통한 파일복사 프로그램
- */
-
+//버퍼 필터 스트림 이용한 파일복사 프로그램
 public class E04FilterBufferFileCopy {
 
 	public static void main(String[] args) {
@@ -26,16 +23,11 @@ public class E04FilterBufferFileCopy {
 			BufferedOutputStream bufOut = new BufferedOutputStream(out);
 
 			int copyByte = 0;
-			int bData;
 			
-			/*
-버퍼 필터 스트림을 통해 파일을 읽어 저장하므로, 읽기/쓰기 속도가 매우 빠르다.
-			 */
+//버퍼 필터 스트림을 통해 파일을 읽어 저장하므로, 읽기/쓰기 속도가 매우 빠르다.
 			while(true) {			
-				bData = bufIn.read();				
-				if(bData==-1) {
-					break;
-				}
+				int bData = bufIn.read();				
+				if(bData==-1) {break;} //더이상릭을내용없으면 -1이되어 루프탈출
 				bufOut.write(bData);
 				copyByte++;
 			}		

@@ -34,7 +34,7 @@ public class E06LocalDateTime {
 //getMonths() 등의메소드로 남은날짜얻어올수있다.		
 		Period pr = Period.between(ld, xMas);
 		System.out.println(pr.getMonths()+" 개월"+pr.getDays()+" 일 남음");
-//ChronoUnit클래스 : 특정시간단위로 날짜차이구함. 0개월 남음
+//ChronoUnit클래스 : 특정시간단위로 날짜차이 구함. 0개월 남음
 		System.out.println(ChronoUnit.MONTHS.between(ld, xMas)+" 개월 남음");
 		System.out.println(ChronoUnit.DAYS.between(ld, xMas)+" 일 남음");
 //현재지군 이전/이후 날짜구할수있다. 메서드체인형태로 호출할수도있다.

@@ -50,7 +50,5 @@ public class E05FilterDataBufferStream {
 			System.out.println("IO예외발생");
 			e.printStackTrace();
 		}
-		
 	}
-
 }

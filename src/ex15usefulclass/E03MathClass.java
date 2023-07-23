@@ -46,6 +46,7 @@ public class E03MathClass extends Object {
 		
 		System.out.println("=== 거듭제곱 ===");
 		System.out.println("2의 10승은? "+Math.pow(2,10));
+		System.out.println("16의 제곱근은? "+(int)Math.sqrt(16));
 	}
 
 }
