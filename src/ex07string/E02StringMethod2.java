@@ -10,6 +10,7 @@ public class E02StringMethod2 {
 		System.out.println("====== 6] codePointAt ======");
 		System.out.println("str1 첫번째 문자의 아스키코드 : "+str1.codePointAt(0));
 		System.out.println("str2 세번째 문자의 아스키코드 : "+str2.codePointAt(2));
+		System.out.println(str1.codePointAt(1)<'l'?1:0);
 		
 		System.out.println("====== 7,8] endWith(), startWith() ======");
 		System.out.println("www.daum.net".endsWith("net"));

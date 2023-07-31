@@ -23,12 +23,10 @@ public class E02ByteBufferFileCopy {
 		try {
 			InputStream in = new FileInputStream("src/ex20io/media2.zip");
 			OutputStream out = new FileOutputStream("src/ex20io/media2_copy2.zip");
-			
 			int copyByte = 0;
-			int readLen;
 			byte buffer[] = new byte[1024];
 			while(true) {
-				readLen = in.read(buffer); //배열크기인 1kbyte씩 파일읽어온다
+				int readLen = in.read(buffer); //배열크기인 1kbyte씩 파일읽어온다
 				if(readLen==-1) {break;	} 
 				out.write(buffer, 0, readLen);
 				copyByte += readLen;

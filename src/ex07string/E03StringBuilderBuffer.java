@@ -2,7 +2,7 @@ package ex07string;
 
 public class E03StringBuilderBuffer {
 /*
- * String 클래슨느 기존문자열에 새 문자열 추가하면 새로 생성된 메모리에 문자열을 저장한다.
+ * String 클래스는 기존문자열에 새 문자열 추가하면 새로 생성된 메모리에 문자열을 저장한다.
  * 기존 메모리가 소멸되고 새 메모리가 생성되는 낭비를 막기위해 문자열 변경이 많은 경우에는 
  * StringBuffer 클래스 사용
  * 
@@ -11,7 +11,7 @@ public class E03StringBuilderBuffer {
  */
 	public static void main(String[] args) {
 		
-		StringBuffer strBuf = new StringBuffer("AB");
+		StringBuffer strBuf = new StringBuffer();
 		strBuf.append(25);
 		strBuf.append("Y").append(true);
 		System.out.println("strBuf = "+strBuf);
@@ -49,6 +49,7 @@ public class E03StringBuilderBuffer {
 		System.out.println("buf = "+buf);
 		System.out.println("저장된 문자열 크기 : "+buf.length());
 		System.out.println("기본 버퍼 크기 : "+buf.capacity());
+		System.out.println("aaa"+'b');
 	}
 
 }

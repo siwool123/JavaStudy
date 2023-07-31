@@ -4,9 +4,9 @@ class AA {
 	public void AA() {} //부모클래스의 디폴트생성자 (생략)
 }
 class BB extends AA {
-	public BB() { //자식클래스의 디폴트생성자 (생략)
-		super(); //부모클래스를 호출하는 문장 (생략)
-	}
+	//public BB() { //자식클래스의 디폴트생성자 (생략)
+	//	super(); //부모클래스를 호출하는 문장 (생략)
+	//}
 }
 
 public class Test {

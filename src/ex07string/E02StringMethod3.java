@@ -28,7 +28,7 @@ public class E02StringMethod3 {
 		}
 		
 		System.out.println("====== 14] substring() ======");
-		System.out.println(str1.substring(3)+", "+str1.substring(0,9));
+		System.out.println(str1.substring(3)+", "+str1.substring(1,4));
 	}
 
 }

@@ -23,6 +23,7 @@ public class E02StringMethod1 {
 		System.out.println("=== 5] contains() ===");
 		System.out.println(str1.contains("To"));
 		System.out.println(str1.contains("to"));
+		System.out.println(str1.toLowerCase());
 	}
 
 }

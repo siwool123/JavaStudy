@@ -2,7 +2,9 @@ package quiz;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Exercise02 {
 
@@ -10,6 +12,8 @@ public class Exercise02 {
 		int[] arr = {1, 0, 1, 1, 1, 3, 5};
 		String[] strA = {"We", "are", "the", "world!"};
 		String str = "aAb1B2cC34oOp";
+		String binomial = "43 * 12";
+        String[] a = binomial.split(" \\+ | \\- | \\* ");
 		for(int i : reverse(arr)) {
 			System.out.print(i+" ");
 		}
@@ -32,7 +36,18 @@ public class Exercise02 {
 		System.out.println(itemLen(strA));
 		System.out.println(numSum(str));
 		for(int i:oddArr(10)) {System.out.print(i+", "); }
-		
+		System.out.println("\n"+age(10));
+//		System.out.println(arr[-1]);
+		System.out.println(findNum(232443, 4));
+		System.out.println(str.toLowerCase());		
+		String str2 = "adbddcd";
+        String[] strArr1 = str2.split("d");
+        String[] strArr2 = str2.split("\\d+");
+        System.out.println(Arrays.toString(strArr1));  // [a, b, c]
+        System.out.println(Arrays.toString(strArr2)); 
+        int b = Integer.parseInt(a[0]), c = Integer.parseInt(a[1]);
+        System.out.println(a.length+", "+a[0]+", "+a[1]+", "+(b+c));
+        
 }
 /*
  * 정수가 들어 있는 배열 num_list가 매개변수로 주어집니다. 
@@ -163,5 +178,114 @@ public class Exercise02 {
 	            else answer.charAt(i) = '2';
 	        }
 	        return answer;
+	    }
+	 public int[] solution(int n, int[] numlist) {
+	       List<Integer> answer = new ArrayList<Integer>();
+	        for(int i:numlist){
+	            if(i%n==0){answer.add(i);}
+	        }
+	        int[] arr = answer.stream().mapToInt(i->i).toArray();
+	        return arr;
+	    }
+	 public static ArrayList<Integer> numList(String my_string) {
+	        ArrayList<Integer> answer = new ArrayList<>();
+	        for(int i=0; i<my_string.length(); i++){
+	            if(Character.isDigit(my_string.charAt(i))) {
+	                answer.add(my_string.charAt(i)-'0');
+	            }
+	        }        
+	        Collections.sort(answer);
+	        return answer;
+	    }
+	 public static String age(int age) {
+	        StringBuilder answer = new StringBuilder();
+	        int l = (int)(Math.log10(age)+1);
+	        if(l==3){
+	            int a = (int)age/100;
+	            int b = (int)(age-a*100)/10;
+	            int c = age-a*100-b*10;
+	            answer.append((char) ('a' + a));
+	            answer.append((char) ('a' + b));
+	            answer.append((char) ('a' + c));
+	        }
+	        else if(l==2){
+	            int a = (int)age/10;
+	            int b = age-a*10;
+	            answer.append((char) ('a' + a));
+	            answer.append((char) ('a' + b));
+	        }
+	        else if(l==1) answer.append((char) ('a' + age));
+	        return answer.toString();
+	    }
+
+	 
+	 public static int findNum(int num, int k) {
+		        int[] arrNum = Stream.of(String.valueOf(num).split("")).mapToInt(Integer::parseInt).toArray();
+		        int answer = 0;
+		        for(int i=0; i<arrNum.length; i++){
+		            if(arrNum[i]==k) {
+		                answer=i+1; break;
+		            }
+		            else answer=-1;
+		        }
+		        return answer;
+		    }
+	 public static int[] solution(int[] num_list, int n) {
+		 	ArrayList<Integer> list = new ArrayList();
+	        int i=0;
+	        while(i<num_list.length){
+	            list.add(num_list[i]);
+	            i+=n;
+	        }
+	        int[] answer = new int[list.size()];
+	        for(int j=0; j<list.size(); j++) answer[j]=list.get(j);
+	        return answer;
+	    }
+	 public int[] solution(int[] num_list) {
+	        num_list.sort();
+	        int[] answer = Arrays.copyOfRange(num_list, 5, num_list.length-1);
+	        return answer;
+	    }
+	 public static String charupper(String my_string, String alp) {
+		 	int b = my_string.indexOf(alp);
+		 	my_string.charAt(b) = Character.toUpperCase(my_string.charAt(b));
+	        return my_string;
+	    }
+	 public static String lstring(String myString) {
+	        for(int i=0; i<myString.length(); i++){
+	           if(myString.codePointAt(i)<'l') {
+	        	   char a = myString.charAt(i);
+	        	   a = 'l';
+	           
+	           }
+	        }
+	        return myString;
+	    }
+	 public static int[] reorder(int[] num_list, int n) {
+		 	int l = num_list.length;
+	        int[] a1 = Arrays.copyOfRange(num_list, n, l-1);
+	        int[] a2 = Arrays.copyOf(num_list, n);
+	        int[] a3 = new int[l];
+	        for(int i=0; i<l-n; i++){a3[i] = a1[i];}
+	        for(int j=0; j<n; j++){a3[j+l-n] = a2[j];}
+	        return a3;
+	    }
+	 public static int calcul(String binomial) {
+	        String[] a = binomial.split(" + | - | * ");
+	        int b = Integer.parseInt(a[0]), c=Integer.parseInt(a[1]);
+	        if(binomial.contains(" + ")) return b+c;
+	        else if(binomial.contains(" - ")) return b-c;
+	        else return b*c;
+	    }
+	 public int[] solution(String[] intStrs, int k, int s, int l) {
+	        List<Integer> list = new ArrayList<>();
+	        for(String i:intStrs){
+	            if(Integer.parseInt(i.substring(s, l))>k)   {
+	            	list.add(Integer.parseInt(i.substring(s, l)));
+	            }
+	        }
+	        Integer[] answer = list.toArray(new Integer[0]);
+	        int[] answer2 = Arrays.stream(answer).mapToInt(i->i).toArray();
+	        return answer2;
 	    }
 }
