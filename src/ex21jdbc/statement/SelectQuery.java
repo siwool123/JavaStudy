@@ -23,7 +23,7 @@ public class SelectQuery extends ConnectDB{
 
 /* 쿼리문 실행시 사용하는 메소드
  * executeQuery() :  select 쿼리문 실행시 사용하는 메소드로 레코드에 영향 미치지 않고
- * 		단순히 조회만 하는 경우 사용. 조회한 레코드를 반환값으로 받아야 하므로 ResultSet 객체가 반환타입으로 정의되어있다.
+ * 		단순히 조회만 하는 경우 사용. 조회한 레코드를 반환값으로 받아야하므로 ResultSet 객체가 반환타입으로 정의되어있다.
  * executeUpdate() : insert, update, delete 같이 기존 레코드에 변화가 생기는 경우 사용
  * 		실행후 적용된 행의 갯수가 int형으로 반환됨*/
 			
