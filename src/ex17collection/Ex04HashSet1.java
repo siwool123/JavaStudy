@@ -63,11 +63,14 @@ public class Ex04HashSet1 {
 //			}
 //			else System.out.println("저장된 객체 : "+obj);
 //		}
+//		for(Object i:set) {
+//			if(i instanceof Teacher) {
+//				System.out.println("Teacher 객체 => "+((Teacher)i).getName());
+//			}
+//			else System.out.println("저장된 객체 : "+i);
+//		}
 		for(Object i:set) {
-			if(i instanceof Teacher) {
-				System.out.println("Teacher 객체 => "+((Teacher)i).getName());
-			}
-			else System.out.println("저장된 객체 : "+i);
+			System.out.println("저장된 객체 : "+i);
 		}
 		/*
 		 * 포함여부확인: set컬렉션내에 해당객체있는지만 확인

@@ -45,10 +45,7 @@ public class Ex06HashMapMain {
  * 		얻어온다. 해당반환값을 확장for문으로 반복하여 value 추출가능 */
 		Set<String> keys = map.keySet();
 		System.out.println("[확장for문 적용]");
-		for(String key : keys) {
-			String value = map.get(key);
-			System.out.println(key+" : "+value);
-		}
+		for(String key : keys) {System.out.println(key+" : "+map.get(key));}
 		
 //3. 이터레이터로 출력 : 동일패턴
 		System.out.println("\n[이터레이터 사용하기]");

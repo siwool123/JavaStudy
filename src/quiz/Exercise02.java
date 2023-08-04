@@ -47,7 +47,9 @@ public class Exercise02 {
         System.out.println(Arrays.toString(strArr2)); 
         int b = Integer.parseInt(a[0]), c = Integer.parseInt(a[1]);
         System.out.println(a.length+", "+a[0]+", "+a[1]+", "+(b+c));
-        
+        System.out.println(collatz2(626331));
+        System.out.println(""+str.charAt(1)+str.charAt(2));
+        for(String i:str.split("a|b|c")) System.out.println(i+", ");
 }
 /*
  * 정수가 들어 있는 배열 num_list가 매개변수로 주어집니다. 
@@ -287,5 +289,32 @@ public class Exercise02 {
 	        Integer[] answer = list.toArray(new Integer[0]);
 	        int[] answer2 = Arrays.stream(answer).mapToInt(i->i).toArray();
 	        return answer2;
+	    }
+	 public static int collatz2(int num) {
+	        if(num==1) return 0;
+	        int cnt = 0;
+	        while(num!=1){
+	            if(cnt==500) return -1;
+	            else if(num%2==0) {num/=2;}
+	            else {num=num*3+1;} 
+	            cnt++;
+	        }
+	        return cnt;
+	    }
+	 public static int numsum(String my_string) {
+	        int sum = 0;
+	        for(int i=0; i<my_string.length(); i++){
+	            for(int j=i+1; j<my_string.length(); j++){
+	                String substr = my_string.substring(i,j+1);
+	                if(Integer.parseInt(substr)%1==0) sum += Integer.parseInt(substr);
+	            }
+	        }
+	        return sum;
+	    }
+	 public static int[] log2(int[] arr) {
+	        int l2 = (int)Math.ceil(Math.log(arr.length)/Math.log(2));
+	        int[] answer = new int[l2];
+	        for(int i=0; i<arr.length; i++){answer[i] = arr[i];}
+	        return answer;
 	    }
 }

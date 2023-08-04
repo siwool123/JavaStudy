@@ -28,11 +28,11 @@ class MyString implements Comparable<MyString> {
 	 */
 	@Override
 	public int compareTo(MyString pStr) {
-//		if(getLength() > pStr.getLength()) return -1;
-//		else if(getLength() < pStr.getLength()) return 1;
-//		else return 0;
-		if(this.str.charAt(0) > pStr.str.charAt(0)) return 1;
-		else return -1;
+		if(getLength() > pStr.getLength()) return -1;
+		else if(getLength() < pStr.getLength()) return 1;
+		else return 0;
+//		if(this.str.charAt(0) > pStr.str.charAt(0)) return 1;
+//		else return -1;
 	}
 
 	@Override //object클래스에서 제공하는 메소드를 오버라이딩

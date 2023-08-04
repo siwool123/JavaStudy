@@ -17,8 +17,8 @@ public class IConnectImpl implements IConnect{
 	public PreparedStatement psmt; //동적쿼리문실행
 	public ResultSet rs; //select 실행결과 반환
 	
-	//public Statement stmt; 정적쿼리 실행
-	//public CallableStatement csmt; 프로시저 실행
+	public Statement stmt; //정적쿼리 실행
+	public CallableStatement csmt; //프로시저 실행
 	//생성자1:기본
 	public IConnectImpl() {
 		System.out.println("IConnectImpl 기본생성자 호출");
@@ -63,8 +63,8 @@ public class IConnectImpl implements IConnect{
 			if(psmt!=null) psmt.close(); //연결확인후 자원해제한다
 			else if(con!=null) con.close();
 			else if(rs!=null) rs.close();
-			//else if(stmt!=null) stmt.close(); 필요한경우 활성화하여 사용하면된다
-			//else if(csmt!=null) csmt.close();
+			else if(stmt!=null) stmt.close(); //필요한경우 활성화하여 사용하면된다
+			else if(csmt!=null) csmt.close();
 			System.out.println("DB자원반납완료");
 		}catch(Exception e){
 			System.out.println("자원반납시 오류가 발생했습니다.");

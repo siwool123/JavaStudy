@@ -25,7 +25,7 @@ public class HRSelected {
  * 5. getString / getDate / getInt 메소드로 각 컬럼에 접근. 오라클 자료형은 문자, 숫자, 날자
  * 	  3가지 타입이므로 메소드도 이와동일 형태를 갖고있다. 각 컬럼에 접근시 아래처럼 인덱스와 컬럼명 두가지를 사용가능 
  * 6. 자원반납(해제) : 모든 작업 마친후 메모리 절약 위해 연결했던 자원 반납 */
-				String sql = "SELECT * FROM employees WHERE department_id=70 ORDER BY employee_id DESC";
+				String sql = "SELECT * FROM employees WHERE department_id=10 ORDER BY employee_id DESC";
 				java.sql.Statement stmt = con.createStatement();
 				ResultSet rs = stmt.executeQuery(sql);
 				while(rs.next()) {
@@ -34,7 +34,8 @@ public class HRSelected {
 					String l_name = rs.getString("last_name"); //3를 넣어도됨
 					java.sql.Date h_date = rs.getDate("hire_date"); //6를 넣어도됨
 					int sal = rs.getInt("salary"); //8를 넣어도됨
-					System.out.println(emp_id+", "+f_name+", "+l_name+", "+h_date+", "+sal);
+					int d_id = rs.getInt("department_id");
+					System.out.println(emp_id+", "+f_name+", "+l_name+", "+h_date+", "+sal+", "+d_id);
 				}
 				rs.close(); 
 				stmt.close();
