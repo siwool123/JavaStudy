@@ -110,6 +110,7 @@ public class Ex03ArrayList1 {
 		 */
 		System.out.println(list1.remove("방탄소년단") ? "방탄 삭제성공" : "방탄 삭제실패");
 		System.out.println(list1.remove("오마이걸") ? "오마이걸 삭제성공" : "오마이걸 삭제실패");
+		System.out.println(list1.remove("오마이걸"));
 		System.out.println("==============삭제 후 출력");
 		for(Object ob : list1) {
 			System.out.println(ob);

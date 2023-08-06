@@ -50,7 +50,8 @@ public class Exercise02 {
         System.out.println(collatz2(626331));
         System.out.println(""+str.charAt(1)+str.charAt(2));
         for(String i:str.split("a|b|c")) System.out.println(i+", ");
-}
+        System.out.println(isPrime(34));
+	}
 /*
  * 정수가 들어 있는 배열 num_list가 매개변수로 주어집니다. 
  * num_list의 원소의 순서를 거꾸로 뒤집은 배열을 return하도록 solution 함수를 완성해주세요.
@@ -316,5 +317,23 @@ public class Exercise02 {
 	        int[] answer = new int[l2];
 	        for(int i=0; i<arr.length; i++){answer[i] = arr[i];}
 	        return answer;
+	    }
+	 public static int[] primeArr(int n) {
+	        ArrayList<Integer> list = new ArrayList<>();
+	        for(int i=2; i<n; i++){
+	            if(n%i==0&&isPrime(i)) list.add(i);            
+	        }
+	        if(list.size()==0) return new int[]{n};
+	        else return list.stream().mapToInt(x -> x).toArray();
+	    }
+	 public static boolean isPrime(int n){
+	        boolean a = true;
+	        for(int i=2; i<n; i++){
+	            if(n%i==0) {
+	                a = false; 
+	                break;
+	            }
+	        }
+	        return a;
 	    }
 }
