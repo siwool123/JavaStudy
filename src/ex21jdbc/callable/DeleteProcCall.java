@@ -21,6 +21,7 @@ public class DeleteProcCall extends IConnectImpl {
 			csmt.registerOutParameter(2, Types.VARCHAR);
 			csmt.execute();
 			System.out.println("삭제프로시저 실행결과 : \n"+csmt.getString(2));
+			System.out.println();
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {
